@@ -7,7 +7,7 @@ type ButtonLargeProps = {
   } & ButtonType;
   
 const ButtonLarge = ({ value, ...props }: ButtonLargeProps) => {
-	return <S.ButtonLarge {...props}>{value}</S.ButtonLarge>;
+	return <S.ButtonLarge type="submit" {...props}>{value}</S.ButtonLarge>;
 };
 
 export default ButtonLarge;

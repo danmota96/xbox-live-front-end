@@ -2,6 +2,8 @@ import * as S from "./style";
 import logo from "assets/imgs/logo.png";
 import BoxLogin from "components/BoxLogin";
 
+
+
 const Login = () => {
   return (
     <S.Login>
