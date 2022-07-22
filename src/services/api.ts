@@ -4,6 +4,8 @@ const api = axios.create({
   baseURL: 'https://xbox-live-server.onrender.com/'
 })
 
+/* https://xbox-live-server.onrender.com/ */
+
 api.interceptors.request.use((config: any) => {
   try {
     const token = localStorage.getItem('jwtLocalStorage');

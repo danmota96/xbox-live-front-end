@@ -1,13 +1,16 @@
 import api from "./api";
+
+
 interface userLoginObj {
   email: string;
   password: string;
 }
 
+
 const loginService = {
   login: (values: userLoginObj) =>
     api
-      .post("/auth", values)
+      .post('/auth', values)
       .then((response: any) => {
         return response;
       })
