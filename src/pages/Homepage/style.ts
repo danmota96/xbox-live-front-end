@@ -6,23 +6,11 @@ export const HomePage = styled.section`
 		min-width: 100vw;
 		min-height: 100vh;
 		color: ${theme.colors.textColor};
+		font-family: 'Roboto';
+		/* background-image: url('./assets/imgs/background.png');
+		background-repeat: no-repeat;
+  		background-size: cover;
+  		background-position: center; */
 	`}
 `;
 
-export const NavBar = styled.nav`
-	${({ theme }) => css`
-		/* INSERIR ICONES  */
-	`}
-`;
-
-export const GameList = styled.section`
-	${({ theme }) => css`
-		/* LISTA DE JOGOS EM BOX */
-	`}
-`;
-
-export const GenreList = styled.section`
-	${({ theme }) => css`
-		/* LISTA DE GÊNEROS EM BOX */
-	`}
-`;
