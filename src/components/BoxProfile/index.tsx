@@ -1,6 +1,6 @@
 import * as S from "./style";
-import React from 'react'
-import edit from "assets/icons/edit.svg"
+import React from 'react';
+import edit from "assets/icons/edit.svg";
 
 const BoxProfile = () => {
   return (
@@ -11,8 +11,8 @@ const BoxProfile = () => {
         <S.EditButton>
         <img src={edit} alt="back" />
         </S.EditButton>
+       
     </S.BoxProfile>
-    
   )
 }
 

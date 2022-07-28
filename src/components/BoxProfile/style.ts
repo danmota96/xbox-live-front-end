@@ -6,6 +6,10 @@ export const BoxProfile = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  transition: all .3s ease-in-out;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 
@@ -25,3 +29,4 @@ export const EditButton = styled.section`
   width:3rem;
   }
 `;
+

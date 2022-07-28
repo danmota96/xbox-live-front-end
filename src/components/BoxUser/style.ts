@@ -6,22 +6,26 @@ export const BoxUser = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  transition: all .3s ease-in-out;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
-
-export const UserIcon = styled.section`
+export const UserIcon = styled.img`
   ${({ theme }) => css``}
-  width: 210px;
-height: 210px;
-left: 80px;
-top: 351px;
-background-color:gray;
-border-radius: 50%;
+  cursor: pointer;
+  width: 13rem;
+  height: 13rem;
+  background-color: gray;
+  border-radius: 50%;
+  
 `;
 
 export const EditButton = styled.section`
   ${({ theme }) => css``}
-  img { 
-  width:3rem;
+  cursor: pointer;
+  img {
+    width: 3rem;
   }
 `;
