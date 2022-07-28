@@ -42,3 +42,15 @@ export const ProfilesList = styled.section`
 	
 	`}
 `;
+
+
+export const ProfileAddButton = styled.section`
+  ${({ theme }) => css``}
+  display:flex;
+  justify-content:center;
+  margin-left: 2rem;
+  padding-bottom: 5rem;
+  img { 
+  width:3rem;
+  }
+`;
