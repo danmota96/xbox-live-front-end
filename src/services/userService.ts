@@ -1,4 +1,9 @@
 import axios from 'axios';
+import api from "./api";
+import swal from 'sweetalert';
+axios.defaults.baseURL = 'https://xbox-live-server.onrender.com';
+axios.defaults.headers.post["Content-Type"] = "application/json";
+
 
 interface userObj {
     name: string;
@@ -9,8 +14,7 @@ interface userObj {
     image: string;
 }
 
-axios.defaults.baseURL = 'https://xbox-live-server.onrender.com';
-axios.defaults.headers.post["Content-Type"] = "application/json";
+
 const userService = {
     postUser: async (newUser: userObj) => {
     try{
@@ -22,4 +26,47 @@ const userService = {
     }
 }
 
-export { userService };
+
+const findUserByIdService = {
+    findUserById: (id: string) =>
+      api.get(`/user/${id}`)
+      .then((response: any) => response)
+      .catch((error: any) => {
+        swal({
+          title: "Error!",
+          text: `${error.message}`,
+          icon: "error",
+          timer: 7000,
+        })
+        console.log(error);
+      }) 
+}
+
+  const updateUserService = {
+    updateGame: (game: object, id: string) =>
+    api.patch(`/user/${id}`, game)
+      .then((response: any) => response)
+      .catch((error: any) => {
+        swal({
+          title: "Error!",
+          text: `${error.message}`,
+          icon: "error",
+          timer: 7000,
+        })
+      })
+  }
+  
+  const deleteUserService = {
+    deleteGame: (id: string) =>
+    api.delete(`/user/${id}`)
+      .then((response: any) => response)
+      .catch((error: any) => {
+        swal({
+          title: "Error!",
+          text: `${error.message}`,
+          icon: "error",
+          timer: 7000,
+        })
+      })
+  }
+export { userService, findUserByIdService, deleteUserService, updateUserService };
