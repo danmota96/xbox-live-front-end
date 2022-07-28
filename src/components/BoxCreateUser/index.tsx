@@ -2,7 +2,7 @@ import ButtonLarge from 'components/ButtonLarge';
 import { SyntheticEvent, useState } from 'react';
 import { userService } from 'services/userService';
 import { useNavigate } from 'react-router-dom';
-import swal from 'sweetalert';
+import swall from 'sweetalert';
 import React from 'react';
 import * as S from "./style";
 
@@ -35,7 +35,11 @@ const BoxCreateUser = () => {
     const req = await userService.postUser(newUser);
     if (req?.status === 201) { 
     navigate('/')
-    }
+    }  swall({
+      title: 'User created!',
+      icon: 'success',
+      timer: 3000,
+    })
   }
 
 
@@ -88,7 +92,7 @@ const BoxCreateUser = () => {
    
       />
       
-      <ButtonLarge />
+      <ButtonLarge value={'Register'}/>
     </S.BoxCreateForm>
     </S.BoxCreateUser>
   )
