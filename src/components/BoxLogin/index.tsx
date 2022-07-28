@@ -4,7 +4,9 @@ import * as S from "./style";
 import { useState } from 'react';
 import { loginService } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
-import swall from 'sweetalert';
+import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
+
 
 interface userLoginObj {
   email: string;
@@ -30,21 +32,23 @@ const BoxLogin = () => {
     event.preventDefault();
     const response = await loginService.login(values)
     const jwt = response?.data.token;
+    const userId = response.data.user.id;
+    console.log(response.data);
     
     if(jwt) {
       localStorage.setItem('jwtLocalStorage', jwt);
-      swall({
-        title: 'Seja bem vindo',
+      localStorage.setItem('UserId', userId);
+      swal({
+        title: 'Welcome!',
         icon: 'success',
         timer: 3000,
       })
-      navigate('/home');
-    }swall({
+      navigate('/profile/select'); 
+    }else swal({
       title: 'Invalid credentials',
       icon: 'error',
       timer: 3000,
     })
-    console.log(response);
   }
 
   return (
@@ -55,8 +59,9 @@ const BoxLogin = () => {
     <S.BoxLoginForm onSubmit={loginUser}>
       <input type="text" placeholder="E-mail" name='email' id='email' onChange={handleChangesValues}/>
       <input type="password" placeholder="Password"  name='password' id='password' onChange={handleChangesValues}/>
-      <a href="DIRECIONAR PARA CREATE USER">No account? Create one!</a>
+      <a><Link to="/create-user" className='link-register'>No account?Create one!</Link></a> 
       <ButtonLarge value="Sign in"/>
+      
     </S.BoxLoginForm>
   </S.BoxLogin>
   )
