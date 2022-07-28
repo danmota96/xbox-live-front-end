@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 export const GenresSection = styled.section`
 	${({ theme }) => css`
+	margin-top: 7rem;
 	`}
 `;
 
