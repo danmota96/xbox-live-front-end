@@ -1,42 +1,19 @@
 import GameCard from 'components/GameCard';
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { findAllGames } from 'services/gameService';
+import { Game } from 'types';
 import * as S from "./style";
 
- interface Game  {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  year: number;
-  image: string;
-  TrailerYouTubeUrl: string;
-  GameplayYouTubeUrl: string;
-  genreName: string;
-  ImdbScore: number;
+ interface GameListProps  {
+  list: Game[];
 } 
 
- const GameList = () => {
-
-  const [games, setGames] = useState<Game[]>([]);
-
-  useEffect(() => { 
-  getAllGames();
-  },[]);
-
-  const getAllGames = async () => { 
-    const response = await findAllGames.allGames()  ;
-    console.log(response);
-    setGames(response.data);
-  }
+ const GameList = ({list}: GameListProps) => {
 
   return (
   <S.GamesSection>
     <h1>All Games</h1>
     <S.GameList>
-      {games.map((game, index)=>(
-      <GameCard game={game} key={index} />
+      {list.map((element, index)=>(
+      <GameCard game={element} key={index} />
       ))}
     </S.GameList>
   </S.GamesSection>
