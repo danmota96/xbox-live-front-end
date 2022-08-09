@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./style";
-import logo from "assets/imgs/logo.png";
 import back from "assets/icons/back.svg";
 import { useNavigate } from "react-router-dom";
 import BoxGameSettings from "components/BoxGameSettings";
@@ -14,7 +13,7 @@ const GameSettings = () => {
   return (
     <S.GameSettings>
       <S.BackButton>
-        <img src={back} onClick={goToHome} />
+        <img src={back} alt="backButton" onClick={goToHome} />
       </S.BackButton>
       <S.WhiteBox>
         <S.BoxContent>

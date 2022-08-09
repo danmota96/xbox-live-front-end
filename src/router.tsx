@@ -15,7 +15,7 @@ const Router = () => {
             <Route path={RoutePath.CREATE_USER} element={<CreateUser/>} />
             <Route path={RoutePath.PROFILE_SELECT} element={<Profile/>} />
             <Route path={RoutePath.SETTINGS_GAMES} element={<GameSettings/>} />
-            <Route path={RoutePath.GAME_DETAILS} element={<GameDetails/>} />
+            <Route path={RoutePath.GAME_DETAILS} element={<GameDetails />} />
         </Routes>
     );
 }

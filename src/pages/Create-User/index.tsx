@@ -14,7 +14,7 @@ const CreateUser = () => {
   return (
     <S.CreateUser>
         <S.BackButton >
-        <img src={back} onClick={goToStart} />
+        <img src={back} onClick={goToStart} alt="back-button"/>
         </S.BackButton>
         <S.MenuLogo>
         <img src={logo} alt="Logo" />

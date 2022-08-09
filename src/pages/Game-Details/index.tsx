@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import * as S from "./style";
 import back from "assets/icons/back.svg";
 
+
 const GameDetails = () => {
     let Navigate = useNavigate();
     function goToHome() {
@@ -13,7 +14,7 @@ const GameDetails = () => {
         <S.BackButton >
         <img src={back} onClick={goToHome} />
         </S.BackButton>
-        <h1>Forza Motorsport 7(title)</h1>
+        <h1>Forza 7</h1>
         <S.GameDetailsBox1>
         <img src='https://images-americanas.b2w.io/produtos/01/00/item/132532/8/132532885_1GG.jpg' />
         <iframe src="https://www.youtube.com/embed/9aAr5blVy0g" /* COLOCAR PARA LER A URL */></iframe>

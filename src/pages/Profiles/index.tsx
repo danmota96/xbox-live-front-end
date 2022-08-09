@@ -7,6 +7,9 @@ import { useNavigate } from "react-router-dom";
 import BoxProfile from "components/BoxProfile";
 import addprofile from "assets/icons/add-profile.svg";
 
+
+
+
 const Profiles = () => {
 
   let Navigate = useNavigate();
@@ -17,13 +20,16 @@ const Profiles = () => {
   return (
     <S.Profiles>
       <S.BackButton >
-        <img src={back} onClick={goToStart} />
+        <img src={back} onClick={goToStart} alt="backbutton" />
         </S.BackButton>
         <S.MenuLogo>
         <img src={logo} alt="Logo" />
       </S.MenuLogo>
+
       <S.ProfilesList>
+        
       <BoxUser/>
+
      <BoxProfile/>
      <BoxProfile/>
      <S.ProfileAddButton>

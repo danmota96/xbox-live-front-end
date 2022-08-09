@@ -4,6 +4,7 @@ import NavBar from 'components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import back from "assets/icons/back.svg";
 import * as S from "./style";
+import { mockedGames } from 'mocks/games';
 
 
 const HomePage = () => {  
@@ -18,7 +19,7 @@ const HomePage = () => {
         </S.BackButton>
       <NavBar />
       <S.BoxItems>
-      <GameList />
+      <GameList list={mockedGames} />
       {/* <FavoriteList/> */}
       <GenreList /> 
       </S.BoxItems>
