@@ -11,9 +11,11 @@ interface cardProps {
 
 const GenreCard = ({genre}: cardProps) => {
   return (
-    <S.GenreBox>
-       <h1>{genre.genre}</h1>
-    </S.GenreBox>
+    <S.GenreNav>
+      <S.NavigationGenresButton>
+      <h2>{genre.genre}</h2>
+      </S.NavigationGenresButton>
+    </S.GenreNav>
   )
 }
 

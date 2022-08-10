@@ -15,7 +15,7 @@ const GameCard = ({ game }: GameCardProps) => {
   return (
     <S.GameBox>
       <img src={game.image} alt={game.title} onClick={goToGameDetails} />
-      <h1>{game.title}</h1>
+      <h4>{game.title}</h4>
     </S.GameBox>
   );
 };

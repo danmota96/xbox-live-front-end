@@ -10,9 +10,9 @@ const BoxUser = () => {
 
   return (
     <S.BoxUser>
-        <S.UserIcon src='user-image' alt='loggeuser' onClick={goToAdminHome}>
+        <S.UserIcon src='https://avatarfiles.alphacoders.com/218/218198.jpg' alt='loggeduser' onClick={goToAdminHome}>
         </S.UserIcon>
-        <h1>Admin</h1>
+        <h1>Admin</h1>{/* LOGGED USER */}
         <S.EditButton>
         <img src={edit} alt="back" />
         </S.EditButton>

@@ -25,16 +25,11 @@ const Profiles = () => {
         <S.MenuLogo>
         <img src={logo} alt="Logo" />
       </S.MenuLogo>
-
-      <S.ProfilesList>
-        
+      <S.ProfilesList>   
       <BoxUser/>
-
-     <BoxProfile/>
-     <BoxProfile/>
      <S.ProfileAddButton>
           <img src={addprofile} alt="add-profile"/>
-        </S.ProfileAddButton>
+      </S.ProfileAddButton>
       </S.ProfilesList>
      
     </S.Profiles>

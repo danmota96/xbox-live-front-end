@@ -50,7 +50,12 @@ export const ProfileAddButton = styled.section`
   justify-content:center;
   margin-left: 2rem;
   padding-bottom: 5rem;
+  cursor: pointer;
   img { 
   width:3rem;
+  }
+  transition: all .3s ease-in-out;
+  :hover {
+    transform: scale(1.1);
   }
 `;

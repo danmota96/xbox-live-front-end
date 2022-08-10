@@ -6,10 +6,7 @@ export const BoxUser = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  transition: all .3s ease-in-out;
-  :hover {
-    transform: scale(1.1);
-  }
+  
 `;
 
 export const UserIcon = styled.img`
@@ -19,12 +16,20 @@ export const UserIcon = styled.img`
   height: 13rem;
   background-color: gray;
   border-radius: 50%;
+  transition: all .3s ease-in-out;
+  :hover {
+    transform: scale(1.1);
+  }
   
 `;
 
 export const EditButton = styled.section`
   ${({ theme }) => css``}
   cursor: pointer;
+  transition: all .3s ease-in-out;
+  :hover {
+    transform: scale(1.1);
+  }
   img {
     width: 3rem;
   }

@@ -18,11 +18,14 @@ const HomePage = () => {
         <img src={back} onClick={goToStart} />
         </S.BackButton>
       <NavBar />
+      <section>
       <S.BoxItems>
       <GameList list={mockedGames} />
       {/* <FavoriteList/> */}
       <GenreList /> 
       </S.BoxItems>
+      </section>
+      
 
     </S.HomePage>
   )

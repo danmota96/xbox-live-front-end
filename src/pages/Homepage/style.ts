@@ -12,11 +12,15 @@ export const HomePage = styled.section`
 	`}
 `;
 
+
 export const BoxItems = styled.section`
 	${({ theme }) => css`
 		margin: 2rem 0 0 5rem;
+		width: 90%;
 	`}
 `;
+
+
 
 export const BackButton = styled.div`
 	${() => css`
