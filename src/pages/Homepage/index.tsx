@@ -5,9 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import back from "assets/icons/back.svg";
 import * as S from "./style";
 import { mockedGames } from 'mocks/games';
+import { useGames } from 'Contexts/games';
 
 
 const HomePage = () => {  
+  const { games } = useGames();
+
   let Navigate = useNavigate();
   function goToStart() {
   Navigate("/profile/select");
@@ -20,7 +23,7 @@ const HomePage = () => {
       <NavBar />
       <section>
       <S.BoxItems>
-      <GameList list={mockedGames} />
+      <GameList list={games} />
       {/* <FavoriteList/> */}
       <GenreList /> 
       </S.BoxItems>
