@@ -21,20 +21,11 @@ export const UserIcon = styled.img`
 `;
 
 
-export const  GameManagementSVG= styled.img`
+export const  settingsSVG= styled.img`
 	${({ theme }) => css`
 	width: 3rem;
 	transition: all .3s ease-in-out;
-  :hover {
-    transform: scale(1.1);
-  }
-	`}
-`;
-
-export const UserManagementSVG = styled.img`
-	${({ theme }) => css`
-	width: 3rem;
-	transition: all .3s ease-in-out;
+	cursor: pointer;
   :hover {
     transform: scale(1.1);
   }
