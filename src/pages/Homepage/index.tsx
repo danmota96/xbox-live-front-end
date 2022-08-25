@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import back from "assets/icons/back.svg";
 import * as S from "./style";
 import { mockedGames } from 'mocks/games';
-import { useGames } from 'Contexts/games';
+import { useGames } from 'contexts/games';
 
 
 const HomePage = () => {  

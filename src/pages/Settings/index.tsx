@@ -7,11 +7,19 @@ import genreSettings from "assets/icons/genresettings.svg";
 import { useNavigate } from "react-router-dom";
 import SettingsGameCard from "components/SettingsGameCard";
 import { mockedGames } from "mocks/games";
+import { useState } from "react";
+import GameModal from "components/GameModal";
 
 const Settings = () => {
   let Navigate = useNavigate();
   function goToHome() {
     Navigate("/home");
+  }
+
+  const [openModal, setOpenModal ] = useState<boolean>(false);
+
+  const handleOpenModal = () => {
+   setOpenModal(!openModal); 
   }
 
   return (
@@ -67,7 +75,7 @@ const Settings = () => {
         </S.EditEntitiesSelector> */}
 
         <S.EntitiesEditList>
-          <S.AddEntitieCard>
+          <S.AddEntitieCard onClick={handleOpenModal}>
             <h2>+</h2>
             <p>Add Game</p>
           </S.AddEntitieCard>
@@ -82,6 +90,9 @@ const Settings = () => {
           <button>Save Changes</button>
         </S.ConfirmationContainer> */}
       </S.EditEntitiesContainer>
+
+      {openModal && <GameModal handleOpenModal={handleOpenModal}/> }
+
     </S.Settings>
   );
 };
