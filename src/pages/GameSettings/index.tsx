@@ -1,12 +1,12 @@
 import * as S from "./style";
 import back from "assets/icons/back.svg";
 import { useNavigate } from "react-router-dom";
-import SettingsGameCard from "components/SettingsGameCard";
+import SettingsGameCard from "components/GamesCRUD/SettingsGameCard";
 import { useState } from "react";
-import GameModal from "components/GameModal";
+import GameModal from "components/GamesCRUD/GameModal";
 import { useGames } from "contexts/games";
 import { Game } from "types";
-import DeleteGameModal from "components/DeleteGameModal";
+import DeleteGameModal from "components/GamesCRUD/DeleteGameModal";
 import MenuSettings from "components/SettingsMenu";
 
 const GameSettings = () => {

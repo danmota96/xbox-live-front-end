@@ -4,8 +4,8 @@ export enum RoutePath {
     CREATE_USER = '/create-user',
     GAME_DETAILS = '/game-details',
     PROFILE_SELECT = '/profile/select',
-    GAMESETTINGS = '/settings/games',
-    GENRESETTINGS = '/settings/genres',
-    SETTINGS_TABLES = 'genres',
-    SETTINGS_USERS = 'users',
+    GAMES_ETTINGS = '/settings/games',
+    GENRE_SETTINGS = '/settings/genres',
+    PROFILE_SETTINGS = '/settings/profiles',
+    USERS_SETTINGS = '/settings/users',
   }

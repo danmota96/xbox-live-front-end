@@ -7,6 +7,7 @@ import Login from "./pages/Login/index";
 import Profile from "./pages/Profiles/index";
 import GameSettings from 'pages/GameSettings';
 import GenreSettings from 'pages/GenreSettings';
+import ProfileSettings from 'pages/ProfileSettings';
 
 const Router = () => {
     return (
@@ -15,8 +16,9 @@ const Router = () => {
             <Route path={RoutePath.HOME} element={<HomePage/>} />
             <Route path={RoutePath.CREATE_USER} element={<CreateUser/>} />
             <Route path={RoutePath.PROFILE_SELECT} element={<Profile/>} />
-            <Route path={RoutePath.GAMESETTINGS} element={<GameSettings/>} />
-            <Route path={RoutePath.GENRESETTINGS} element={<GenreSettings/>} />
+            <Route path={RoutePath.GAMES_ETTINGS} element={<GameSettings/>} />
+            <Route path={RoutePath.GENRE_SETTINGS} element={<GenreSettings/>} />
+            <Route path={RoutePath.PROFILE_SETTINGS} element={<ProfileSettings/>} />
             <Route path={RoutePath.GAME_DETAILS} element={<GameDetails />} />
         </Routes>
     );

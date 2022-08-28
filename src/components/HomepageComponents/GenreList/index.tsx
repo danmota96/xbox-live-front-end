@@ -1,4 +1,4 @@
-import GenreCard from 'components/GenreCard';
+import GenreCard from 'components/HomepageComponents/GenreCard';
 import { Genre } from 'types';
 import * as S from "./style";
 

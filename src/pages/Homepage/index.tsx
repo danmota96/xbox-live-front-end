@@ -1,6 +1,6 @@
-import GameList from 'components/GameList';
-import GenreList from 'components/GenreList';
-import NavBar from 'components/NavBar';
+import GameList from 'components/HomepageComponents/GameList';
+import GenreList from 'components/HomepageComponents/GenreList';
+import NavBar from 'components/HomepageComponents/NavBar';
 import { useNavigate } from 'react-router-dom';
 import back from "assets/icons/back.svg";
 import * as S from "./style";

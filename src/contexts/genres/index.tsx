@@ -34,6 +34,7 @@ import {
       };
       api.get("/genre", headers).then((res) => {
         setGenre(res.data);
+        console.log(res);
       }
      );
     };

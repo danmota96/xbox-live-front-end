@@ -4,6 +4,16 @@ interface ActiveButtonProps {
 	active?: boolean;
 }
 
+export const BackButton = styled.div`
+	${() => css`
+		cursor:pointer;
+		padding: 1rem;
+		img {
+		width:2rem;
+		}
+	`}
+`;
+
 export const SettingsNavigationContainer = styled.div`
 	${() => css`
 		min-width: 19.188rem;

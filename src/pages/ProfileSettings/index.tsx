@@ -1,31 +1,32 @@
 import back from "assets/icons/back.svg";
-import DeleteGenreModal from "components/GenresCRUD/DeleteGenreModal";
-import GenreModal from "components/GenresCRUD/GenreModal";
+import DeleteProfileModal from "components/ProfilesCRUD/DeleteProfileModal";
+import ProfileModal from "components/ProfilesCRUD/ProfileModal";
 import MenuSettings from "components/SettingsMenu";
-import { useGenres } from "contexts/genres";
+import { useProfiles } from "contexts/profiles";
+import { mockedProfiles } from "mocks/profile";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Genre } from "types";
+import { Profile } from "types";
 import * as S from "./style";
 
-const GenreSettings = () => {
+const ProfileSettings = () => {
   let Navigate = useNavigate();
   function goToHome() {
     Navigate("/home");
   }
   
-  const { genres } = useGenres();
+  const { profiles } = useProfiles();
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false);
-  const [genre, setGenre] = useState<Genre | undefined>(undefined);
+  const [profile, setProfile] = useState<Profile | undefined>(undefined);
 
   const handleOpenModal = () => {
     setOpenModal(!openModal);
   };
 
   
-  const handleOpenUpdateModal = (genre: Genre) => {
-    setGenre(genre);
+  const handleOpenUpdateModal = (profile: Profile) => {
+    setProfile(profile);
     setOpenModal(!openModal);
   };
 
@@ -38,59 +39,60 @@ const GenreSettings = () => {
        <S.BackButton>
         <img src={back} alt="backButton" onClick={goToHome} />
       </S.BackButton>
-      <MenuSettings path={"genres"} />
+      <MenuSettings path={"profiles"} />
      
 
       <S.EditEntitiesContainer>
-        <h2>Manage Genres</h2>
+        <h2>Manage Profiles</h2>
         <S.EntitiesEditList>
           <S.AddEntityCard onClick={handleOpenModal}>
             <h2>+</h2>
-            <p>Add Genre</p>
+            <p>Add Profile</p>
           </S.AddEntityCard>
 
-          {genres.map((element) => (
-          <S.SettingsGenreCard key={element.id}>
-            <h2>{element.genre}</h2>
+          {profiles.map((element) => (
+          <S.SettingsProfileCard key={element.id}>
+            <img src={element.image} alt={element.name} />
+            <h2>{element.name}</h2>
 
             <div>
-            <S.SettingsGenreEditCardButton
+            <S.SettingsProfileEditCardButton
                 onClick={() => {
-                  setGenre(genre);
+                  setProfile(profile);
                   handleOpenUpdateModal(element);
                 }}
               >
                 Edit
-              </S.SettingsGenreEditCardButton>
-              <S.SettingsGenreDeleteCardButton
+              </S.SettingsProfileEditCardButton>
+              <S.SettingsProfileDeleteCardButton
                 onClick={() => {
-                  setGenre(element);
+                  setProfile(element);
                   handleOpenDeleteModal();
                 }}
               >
                 Delete
-              </S.SettingsGenreDeleteCardButton>
+              </S.SettingsProfileDeleteCardButton>
             </div>
               
             
-          </S.SettingsGenreCard>
-        ))}
+          </S.SettingsProfileCard>
+        ))} 
 
         </S.EntitiesEditList>
       </S.EditEntitiesContainer>
  
        {openModal && (
-        <GenreModal
-          setGenre={setGenre}
-          genre={genre}
+        <ProfileModal
+          setProfile={setProfile}
+          profile={profile}
           handleOpenModal={handleOpenModal}
         />
       ) }
 
       {openDeleteModal && (
-        <DeleteGenreModal
-          setGenre={setGenre}
-          genreId={genre?.id}
+        <DeleteProfileModal
+          setProfile={setProfile}
+          profileId={profile?.id}
           handleOpenDeleteModal={handleOpenDeleteModal}
         />
       )} 
@@ -98,4 +100,4 @@ const GenreSettings = () => {
   );
 };
 
-export default GenreSettings;
+export default ProfileSettings;

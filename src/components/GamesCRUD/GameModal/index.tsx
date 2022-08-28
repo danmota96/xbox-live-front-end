@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import * as S from "./style";
 import * as yup from "yup";
 import { useState } from "react";
-import { mockedGenres } from "../../mocks/genres"
+import { mockedGenres } from "../../../mocks/genres"
 import api from "services/api";
 import toast from "react-hot-toast";
 import { useGames } from "contexts/games";
@@ -73,7 +73,6 @@ const updateGameSchema = yup.object().shape({
 const GameModal = ({handleOpenModal, game, setGame}: GameModalProps  ) => { 
   const { handleGetGames } = useGames();
   const {  genres , handleGetGenres } = useGenres();
-  console.log(genres);
   const [genreName, setGenreNameId] = useState<string>(
     game ? game.genreName: ""
     );

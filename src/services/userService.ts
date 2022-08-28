@@ -4,7 +4,6 @@ import swal from 'sweetalert';
 axios.defaults.baseURL = 'https://xbox-live-server.onrender.com';
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
-
 interface userObj {
     name: string;
     email: string;
@@ -13,7 +12,6 @@ interface userObj {
     cpf: string;
     image: string;
 }
-
 
 const userService = {
     postUser: async (newUser: userObj) => {

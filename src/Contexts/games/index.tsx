@@ -26,13 +26,16 @@ export const GameProvider = ({ children }: GameProviderProps) => {
 
   const handleGetGames = () => {
     const token = localStorage.getItem("token");
-
-    const headers = {
+  
+    const headers = { 
       headers: {
-        Authorization: "Bearer ${token}",
+        Authorization: `Bearer ${token}`,
       },
     };
-    api.get("/game").then((res) => setGame(res.data));
+    api.get("/game", headers).then((res) => {
+      setGame(res.data);
+      console.log(res);
+    })
   };
 
   useEffect(() => {

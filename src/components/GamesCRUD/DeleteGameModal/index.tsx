@@ -3,8 +3,8 @@ import { useGames } from "contexts/games";
 import { Dispatch, SetStateAction } from "react";
 import toast from "react-hot-toast";
 import api from "services/api";
-import { ModalOverlay } from "../../assets/styles/globalStyles";
-import { Game } from "../../types";
+import { ModalOverlay } from "../../../assets/styles/globalStyles";
+import { Game } from "../../../types";
 import * as S from "./style";
 
 interface DeleteGameModalProps {

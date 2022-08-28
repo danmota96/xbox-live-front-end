@@ -2,8 +2,8 @@ import ButtonLarge from "components/ButtonLarge";
 import { useGenres } from "contexts/genres";
 import { toast } from "react-hot-toast";
 import api from "services/api";
-import { ModalOverlay } from "../../assets/styles/globalStyles";
-import { Genre } from "../../types";
+import { ModalOverlay } from "../../../assets/styles/globalStyles";
+import { Genre } from "../../../types";
 import * as S from "./style";
 
 interface DeleteGenreModalProps {

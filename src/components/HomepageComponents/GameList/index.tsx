@@ -1,4 +1,4 @@
-import GameCard from 'components/GameCard';
+import GameCard from 'components/HomepageComponents/GameCard';
 import { Game } from 'types';
 import * as S from "./style";
 

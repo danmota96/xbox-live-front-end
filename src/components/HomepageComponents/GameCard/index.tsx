@@ -9,11 +9,11 @@ interface GameCardProps {
 const GameCard = ({ game }: GameCardProps) => {
   let Navigate = useNavigate();
   function goToGameDetails() {
-    Navigate("/game-details");
+    Navigate("/game-details/");
   }
   return (
-    <S.GameBox>
-      <img src={game.image} alt={game.title} onClick={goToGameDetails} />
+    <S.GameBox  onClick={goToGameDetails}> 
+      <img src={game.image} alt={game.title} />
       <h4>{game.title}</h4>
     </S.GameBox>
   );

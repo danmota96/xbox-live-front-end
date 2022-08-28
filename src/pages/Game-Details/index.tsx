@@ -1,14 +1,20 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import * as S from "./style";
 import back from "assets/icons/back.svg";
+import { Game } from 'types';
 
+
+interface GamePageProps {
+  game?: Game;
+  handleGamePage: () => void;
+}
 
 const GameDetails = () => {
     let Navigate = useNavigate();
     function goToHome() {
       Navigate("/home");
-    }
+}
+
   return (
     <S.GameDetails>
         <S.BackButton >
