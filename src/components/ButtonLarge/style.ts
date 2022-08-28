@@ -1,7 +1,14 @@
 import styled, { css } from "styled-components";
+import { Theme } from "types/styled-components";
 
-export const ButtonLarge = styled.button`
-  ${({ theme }) => css`
+
+interface StyledButtonProps {
+  theme: Theme;
+  variant?: "disabled" | "cancel";
+}
+
+export const ButtonLarge = styled.button<StyledButtonProps>`
+  ${({ theme, variant }) => css`
     background: ${theme.colors.textButtonColor};
     border: none;
     color: ${theme.colors.textColor};
@@ -13,5 +20,13 @@ export const ButtonLarge = styled.button`
     font-weight: 400;
     font-size: 20px;
     line-height: 35px;
+
+    ${variant === "cancel" &&
+    css`
+      background-color: ${theme.colors.baseBg2};
+      color: ${theme.colors.secondaryColor};
+      border: 1px solid ${theme.colors.secondaryColor};
+      box-shadow: none;
+    `}
   `}
 `;

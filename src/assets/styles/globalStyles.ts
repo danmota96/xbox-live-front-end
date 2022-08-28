@@ -7,10 +7,10 @@ export const StyledInput = styled.input`
     box-sizing: border-box;
     width: 18.625rem;
     min-height: 3rem;
-    background-color: ${theme.colors.baseBg1};
+    background-color: ${theme.colors.baseForm};
     border: 1px solid ${theme.colors.baseLine};
     border-radius: 8px;
-    color: ${theme.colors.textColor};
+    color: ${theme.colors.baseLine};
   `}
 `;
 

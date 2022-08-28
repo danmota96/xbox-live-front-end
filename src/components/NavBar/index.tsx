@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const NavBar = () => {
   let Navigate = useNavigate();
   function goToSettings() {
-  Navigate("/settings");
+  Navigate("/settings/games");
 }
 
   return (

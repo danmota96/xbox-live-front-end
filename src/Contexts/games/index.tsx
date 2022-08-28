@@ -14,6 +14,7 @@ interface GameProviderProps {
 
 interface GameProviderData {
   games: Game[];
+  handleGetGames: () => void;
 }
 
 const GameContext = createContext<GameProviderData>({} as GameProviderData);
@@ -31,7 +32,6 @@ export const GameProvider = ({ children }: GameProviderProps) => {
         Authorization: "Bearer ${token}",
       },
     };
-
     api.get("/game").then((res) => setGame(res.data));
   };
 
@@ -40,7 +40,7 @@ export const GameProvider = ({ children }: GameProviderProps) => {
   }, []);
 
   return (
-    <GameContext.Provider value={{ games }}>{children}</GameContext.Provider>
+    <GameContext.Provider value={{ games, handleGetGames }}>{children}</GameContext.Provider>
   );
 };
 
