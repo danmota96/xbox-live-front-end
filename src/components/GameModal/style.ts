@@ -27,7 +27,7 @@ export const Select = styled.select`
     box-sizing: border-box;
     width: 18.625rem;
     height: 3rem;
-    background-color: ${theme.colors.baseBg1};
+    background-color: ${theme.colors.baseLine};
     border: 1px solid ${theme.colors.baseLine};
     border-radius: 8px;
     color: ${theme.colors.textColor};

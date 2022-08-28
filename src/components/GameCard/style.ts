@@ -1,10 +1,14 @@
 import styled, { css } from "styled-components";
 
 export const GameBox = styled.div`
-  ${({ theme }) => css`
+  ${({ theme }) => css` 
+    
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 13.75rem;
+    height: 14rem;
     flex-direction: column;
     transition: box-shadow 0.3s;
     :hover {
@@ -15,5 +19,8 @@ export const GameBox = styled.div`
       width: 10rem;
       height: 12rem;
     }
+    h4 {
+      font-size: 15px;
+    } 
   `}
 `;

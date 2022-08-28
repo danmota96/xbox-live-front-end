@@ -4,7 +4,7 @@ import background from "assets/imgs/background2.png"
 interface ActiveButtonProps {
 	active?: boolean;
 }
-export const Settings = styled.div`
+export const SettingsContainer = styled.div`
 	${({ theme }) => css`
 		background-image: url(${background}); 
 		image
@@ -26,62 +26,6 @@ export const BackButton = styled.div`
 	`}
 `;
 
-export const SettingsNavigationContainer = styled.div`
-	${() => css`
-		min-width: 19.188rem;
-		margin-top: 3rem;
-		height: 90vh;
-		padding: 1.5rem;
-		background-color: #262626; 
-		box-sizing: border-box;
-		border-radius: 8px;
-	`}
-`;
-
-export const SettingsNavigationButtonsList = styled.div`
-	${() => css`
-		width: 100%;
-		height: 45.188rem;
-		background-color: #0D0D0D; 
-		box-sizing: border-box;
-		margin: 1.5rem 0;
-		border-radius: 8px;
-		overflow: hidden;
-	`}
-`;
-
-export const SettingsNavigationButtonsContainer = styled.div<ActiveButtonProps>`
-	${({theme, active}) => css`
-		height: 5.5rem;
-		width: 100%;
-		padding: 1.5rem 0;
-		padding-left: 3rem;
-		box-sizing: border-box;
-		h2 { 
-			font-size: 20px;
-			
-		}
-		img { 
-			width: 30px;
-		}
-		${active &&
-    css`
-      background-color: ${theme.colors.primaryColorOpacity};
-    `}
-	`}
-`;
-
-export const SettingsNavigationButtonSelected = styled.div<ActiveButtonProps>`
-	${({theme, active}) => css`
-		width: 100%;
-		height: 100%;
-
-		${active && css`
-			border-right: 3px solid ${theme.colors.primaryColor};
-			
-		`}
-	`}
-`;
 
 export const EditEntitiesContainer = styled.div`
 	${({ theme }) => css`
@@ -98,15 +42,6 @@ export const EditEntitiesContainer = styled.div`
 	`}
 `;
 
-/* export const EditEntitiesSelector = styled.div`
-	${({ theme }) => css`
-	width: 100%;
-    height: 2.5rem;
-    border-bottom: 1px solid ${theme.colors.baseLine};
-    padding: 0 1.5rem;
-    box-sizing: border-box;
-    `}
-`; */
 
 export const EditEntitiesButton = styled.button<ActiveButtonProps>`
 	${({ theme, active }) => css`
@@ -170,14 +105,4 @@ export const EntityCard = styled.div`
 	`}
 `;
 
-/* export const ConfirmationContainer = styled.div`
-	${({ theme }) => css`
-	width: 100%;
-    height: 7.5rem;
-    padding-left: 1.5rem;
-    padding-top: 3.125rem;
-    box-sizing: border-box;
-    display: flex;
-    gap: 1rem;
-	`}
-`; */
+
