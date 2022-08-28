@@ -5,7 +5,8 @@ import { Routes, Route } from 'react-router-dom';
 import { RoutePath } from 'types/routes';
 import Login from "./pages/Login/index";
 import Profile from "./pages/Profiles/index";
-import Settings from 'pages/Settings';
+import GameSettings from 'pages/GameSettings';
+import GenreSettings from 'pages/GenreSettings';
 
 const Router = () => {
     return (
@@ -14,7 +15,8 @@ const Router = () => {
             <Route path={RoutePath.HOME} element={<HomePage/>} />
             <Route path={RoutePath.CREATE_USER} element={<CreateUser/>} />
             <Route path={RoutePath.PROFILE_SELECT} element={<Profile/>} />
-            <Route path={RoutePath.SETTINGS} element={<Settings/>} />
+            <Route path={RoutePath.GAMESETTINGS} element={<GameSettings/>} />
+            <Route path={RoutePath.GENRESETTINGS} element={<GenreSettings/>} />
             <Route path={RoutePath.GAME_DETAILS} element={<GameDetails />} />
         </Routes>
     );
