@@ -3,17 +3,20 @@ import React, { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GameProvider } from "./games";
+import { GenreProvider } from "./genres";
 
 interface ProvidersProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-const Providers = ({ children }: ProvidersProps ) => {
+const Providers = ({ children }: ProvidersProps) => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GameProvider>
-          {children}
+          <GenreProvider>
+            {children}
+          </GenreProvider>
         </GameProvider>
       </ThemeProvider>
     </BrowserRouter>

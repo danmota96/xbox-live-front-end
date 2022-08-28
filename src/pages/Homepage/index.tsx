@@ -4,12 +4,13 @@ import NavBar from 'components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import back from "assets/icons/back.svg";
 import * as S from "./style";
-import { mockedGames } from 'mocks/games';
 import { useGames } from 'contexts/games';
+import { useGenres } from 'contexts/genres';
 
 
 const HomePage = () => {  
   const { games } = useGames();
+  const { genres } = useGenres();
 
   let Navigate = useNavigate();
   function goToStart() {
@@ -25,7 +26,7 @@ const HomePage = () => {
       <S.BoxItems>
       <GameList list={games} />
       {/* <FavoriteList/> */}
-      <GenreList /> 
+      <GenreList list={genres}/> 
       </S.BoxItems>
       </section>
       

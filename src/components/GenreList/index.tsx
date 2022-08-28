@@ -1,32 +1,19 @@
 import GenreCard from 'components/GenreCard';
-import React, { useEffect, useState } from 'react'
-import { findAllGenres } from 'services/genreService';
+import { Genre } from 'types';
 import * as S from "./style";
 
-interface Genre  { 
-  id: string;
-  genre: string;
+interface GenreListProps  { 
+  list: Genre[];
 }
 
-const GenreList = () => {
-  const[genres, setGenres] = useState<Genre[]>([]);
-
-  useEffect(() => {
-  getAllGenres();
-  },[]);
-
-  const getAllGenres = async () => { 
-  const response = await findAllGenres.allGenres();
-  console.log(response);
-  setGenres(response.data);
-  }
+const GenreList = ({ list }: GenreListProps) => {
 
   return (
   <S.GenresSection>
     <h1>Genres</h1>
     <S.GenreList>
-      {genres.map((genre, index) => (
-         <GenreCard genre={genre} key={index}/>
+      {list.map((element, index) => (
+         <GenreCard genre={element} key={index}/>
         ))} 
     </S.GenreList>
   </S.GenresSection>
