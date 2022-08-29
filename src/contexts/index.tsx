@@ -2,6 +2,7 @@ import theme from "assets/styles/theme";
 import React, { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import { AuthProvider } from "./auth";
 import { GameProvider } from "./games";
 import { GenreProvider } from "./genres";
 import { ProfileProvider } from "./profiles";
@@ -15,6 +16,7 @@ const Providers = ({ children }: ProvidersProps) => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
+      <AuthProvider>
         <UserProvider>
         <ProfileProvider>
         <GameProvider>
@@ -24,6 +26,7 @@ const Providers = ({ children }: ProvidersProps) => {
         </GameProvider>
         </ProfileProvider>
         </UserProvider>
+        </AuthProvider>
       </ThemeProvider>
     </BrowserRouter>
   );

@@ -1,7 +1,7 @@
-import CreateUser from 'pages/Create-User';
-import GameDetails from 'pages/Game-Details';
+import CreateUser from 'pages/CreateUser';
+import GameDetails from 'pages/GameDetails';
 import HomePage from 'pages/Homepage';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { RoutePath } from 'types/routes';
 import Login from "./pages/Login/index";
 import Profile from "./pages/Profiles/index";
@@ -9,11 +9,16 @@ import GameSettings from 'pages/GameSettings';
 import GenreSettings from 'pages/GenreSettings';
 import ProfileSettings from 'pages/ProfileSettings';
 import UserSettings from 'pages/UserSettings';
+import { useAuth } from 'contexts/auth';
 
 const Router = () => {
+ const { logged } = useAuth(); 
+
     return (
         <Routes>
-            <Route path={RoutePath.LOGIN} element={<Login/>} />
+            {logged ? (
+        <>
+         <Route path={RoutePath.LOGIN} element={<Login/>} />
             <Route path={RoutePath.HOME} element={<HomePage/>} />
             <Route path={RoutePath.CREATE_USER} element={<CreateUser/>} />
             <Route path={RoutePath.PROFILE_SELECT} element={<Profile/>} />
@@ -22,6 +27,14 @@ const Router = () => {
             <Route path={RoutePath.PROFILE_SETTINGS} element={<ProfileSettings/>} />
             <Route path={RoutePath.USER_SETTINGS} element={<UserSettings/>} />
             <Route path={RoutePath.GAME_DETAILS} element={<GameDetails />} />
+        </>
+      ) : (
+        <Route path="/" element={<Login />} />
+      )}     
+      <Route
+        path="*"
+        element={<Navigate to={logged ? "/" : "/"} replace />}
+      />
         </Routes>
     );
 }
