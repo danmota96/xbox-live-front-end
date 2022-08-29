@@ -7,5 +7,5 @@ export enum RoutePath {
     GAMES_ETTINGS = '/settings/games',
     GENRE_SETTINGS = '/settings/genres',
     PROFILE_SETTINGS = '/settings/profiles',
-    USERS_SETTINGS = '/settings/users',
+    USER_SETTINGS = '/settings/users',
   }

@@ -1,5 +1,4 @@
 import * as S from "./style";
-
 import user from "assets/icons/user.svg";
 import profiles from "assets/icons/profiles.svg";
 import gameSettings from "assets/icons/gamesettings.svg";
@@ -38,7 +37,10 @@ const SettingsMenu = ({ path }: MenuSettingsProps) => {
           </S.SettingsNavigationButtonSelected>
         </S.SettingsNavigationButtonsContainer>
 
-        <S.SettingsNavigationButtonsContainer active={path === "users"}>
+        <S.SettingsNavigationButtonsContainer
+         active={path === "users"}
+         onClick={() => navigate("/settings/users")}
+         >
           <S.SettingsNavigationButtonSelected active={path === "users"}>
             <img src={user} alt="" />
             <h2>Manage Users</h2>

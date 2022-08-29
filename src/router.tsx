@@ -8,6 +8,7 @@ import Profile from "./pages/Profiles/index";
 import GameSettings from 'pages/GameSettings';
 import GenreSettings from 'pages/GenreSettings';
 import ProfileSettings from 'pages/ProfileSettings';
+import UserSettings from 'pages/UserSettings';
 
 const Router = () => {
     return (
@@ -19,6 +20,7 @@ const Router = () => {
             <Route path={RoutePath.GAMES_ETTINGS} element={<GameSettings/>} />
             <Route path={RoutePath.GENRE_SETTINGS} element={<GenreSettings/>} />
             <Route path={RoutePath.PROFILE_SETTINGS} element={<ProfileSettings/>} />
+            <Route path={RoutePath.USER_SETTINGS} element={<UserSettings/>} />
             <Route path={RoutePath.GAME_DETAILS} element={<GameDetails />} />
         </Routes>
     );
