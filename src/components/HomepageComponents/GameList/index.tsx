@@ -3,7 +3,6 @@ import { useGames } from 'contexts/games';
 import { mockedGames } from 'mocks/games';
 import { useState } from 'react';
 import { Game } from 'types';
-import GameDetailsModal from '../GameDetailsModal';
 import * as S from "./style";
 
 /* gameid - card vai receber o gameid */
@@ -30,7 +29,6 @@ import * as S from "./style";
       />
       ))}
     </S.GameList>
-
   </S.GamesSection>
   )
 }
