@@ -3,7 +3,8 @@ import { useProfiles } from "contexts/profiles";
 import { useNavigate } from "react-router-dom";
 
 const BoxProfile = () => {
-  const { profiles } = useProfiles(); let Navigate = useNavigate();
+  const { profiles } = useProfiles();
+   let Navigate = useNavigate();
   function goToAdminHome() {
   Navigate("/home");
 }
@@ -12,7 +13,7 @@ const BoxProfile = () => {
     <S.BoxProfile>
       {profiles.map((element) => (
         <div>
-        <S.ProfileIcon src={element.image} alt='loggeduser' onClick={goToAdminHome}/>
+        <S.ProfileIcon src={element.image} alt='user' onClick={goToAdminHome}/>
         <h2>{element.name}</h2> 
         </div>
         ))}   

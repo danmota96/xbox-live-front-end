@@ -30,7 +30,6 @@ const GameCard = ({ game, setGame }: GameCardProps) => {
       Navigate(`/game-details/${game.id}`);
     }}> 
       <img src={game.image} alt={game.title} />
-      <h4>{game.title}</h4>
     </S.GameBox>
   );
 };

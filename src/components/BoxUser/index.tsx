@@ -13,7 +13,7 @@ const BoxUser = () => {
     <S.BoxUser>  
         {users.map((element) => (
           <div>
-                <S.UserIcon src={element.image} alt='loggeduser' onClick={goToAdminHome}/>
+                <S.UserIcon src={element.image} alt='profile' onClick={goToAdminHome}/>
                 <h2>{element.name}</h2> 
           </div>   
         ))}    

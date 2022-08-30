@@ -91,7 +91,8 @@ const UserModal = ({ handleOpenModal, user, setUser }: UserModalProps) => {
       handleGetUsers();
       handleOpenModal();
       setUser(undefined);
-    });
+    })
+    .catch(() => toast.error("Select !"));
   };
 
   return (
@@ -121,7 +122,7 @@ const UserModal = ({ handleOpenModal, user, setUser }: UserModalProps) => {
           {...register("cpf")}
         />
         
-        <input type="radio" placeholder="Admin?"/>
+        {/* <input type="radio" placeholder="Admin?"/> */}
 
         <StyledInput
           defaultValue={user ? user.image : ""}
