@@ -2,8 +2,6 @@ import styled, { css } from "styled-components";
 
 export const GameBox = styled.div`
   ${({ theme }) => css` 
-    
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;

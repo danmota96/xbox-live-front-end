@@ -1,21 +1,36 @@
 import GameCard from 'components/HomepageComponents/GameCard';
+import { useGames } from 'contexts/games';
+import { mockedGames } from 'mocks/games';
+import { useState } from 'react';
 import { Game } from 'types';
+import GameDetailsModal from '../GameDetailsModal';
 import * as S from "./style";
 
- interface GameListProps  {
-  list: Game[];
-} 
+/* gameid - card vai receber o gameid */
+ 
+ const GameList = () => {
+  const { games } = useGames();
+  const [game, setGame] = useState<Game | undefined>(undefined);
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
- const GameList = ({list}: GameListProps) => {
+  const handleOpenModal = () => {
+    setOpenModal(!openModal);
+  };
 
   return (
   <S.GamesSection>
     <h1>All Games</h1>
     <S.GameList>
-      {list.map((element, index)=>(
-      <GameCard game={element} key={index} />
+      {games.map((element)=>(
+      <GameCard 
+      setGame={setGame}
+      game={element} 
+      key={element.id}
+  
+      />
       ))}
     </S.GameList>
+
   </S.GamesSection>
   )
 }

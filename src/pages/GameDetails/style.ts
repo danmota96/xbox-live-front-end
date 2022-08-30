@@ -9,7 +9,7 @@ export const GameDetails = styled.section`
 		color: ${theme.colors.textColor};
 		font-family: 'Roboto';
 		h1 {  
-		margin-left: 2rem;
+		text-align: center;
 		font-size: 1.7rem;
 		}
 	`}
@@ -24,11 +24,11 @@ export const GameDetailsBox1 = styled.div`
 	justify-content: center;
 	align-items: center;
 	img { 
-		width: 30rem;
-		height: 30rem;
+		width: 15rem;
+		height: 15rem;
 	}
 	iframe { 
-		width: 35rem;
+		width: 30rem;
 		height: 25rem;
 	}
 	`}
