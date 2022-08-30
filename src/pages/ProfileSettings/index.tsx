@@ -3,7 +3,6 @@ import DeleteProfileModal from "components/ProfilesCRUD/DeleteProfileModal";
 import ProfileModal from "components/ProfilesCRUD/ProfileModal";
 import MenuSettings from "components/SettingsMenu";
 import { useProfiles } from "contexts/profiles";
-import { mockedProfiles } from "mocks/profile";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Profile } from "types";

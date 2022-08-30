@@ -39,23 +39,6 @@ export const ProfilesList = styled.section`
 	flex-direction: row;
 	gap: 2rem;
 	justify-content: center;
-	
 	`}
 `;
 
-
-export const ProfileAddButton = styled.section`
-  ${({ theme }) => css``}
-  display:flex;
-  justify-content:center;
-  margin-left: 2rem;
-  padding-bottom: 5rem;
-  cursor: pointer;
-  img { 
-  width:3rem;
-  }
-  transition: all .3s ease-in-out;
-  :hover {
-    transform: scale(1.1);
-  }
-`;
