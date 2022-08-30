@@ -1,17 +1,21 @@
 import * as S from "./style";
-import React from 'react';
-import edit from "assets/icons/edit.svg";
+import { useProfiles } from "contexts/profiles";
+import { useNavigate } from "react-router-dom";
 
 const BoxProfile = () => {
+  const { profiles } = useProfiles(); let Navigate = useNavigate();
+  function goToAdminHome() {
+  Navigate("/home");
+}
+
   return (
     <S.BoxProfile>
-        <S.ProfileIcon>
-        </S.ProfileIcon>
-        <h1>Jão</h1>
-        <S.EditButton>
-        <img src={edit} alt="back" />
-        </S.EditButton>
-       
+      {profiles.map((element) => (
+        <div>
+        <S.ProfileIcon src={element.image} alt='loggeduser' onClick={goToAdminHome}/>
+        <h2>{element.name}</h2> 
+        </div>
+        ))}   
     </S.BoxProfile>
   )
 }

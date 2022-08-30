@@ -1,13 +1,17 @@
 import styled, { css } from "styled-components";
 
 export const BoxUser = styled.section`
-  ${({ theme }) => css``}
+  ${() => css``}
+ div {
   display:flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+ }
   
 `;
+
+
 
 export const UserIcon = styled.img`
   ${({ theme }) => css``}
@@ -17,20 +21,11 @@ export const UserIcon = styled.img`
   background-color: gray;
   border-radius: 50%;
   transition: all .3s ease-in-out;
+  border-radius: 8px;
+  object-fit: cover;
   :hover {
     transform: scale(1.1);
   }
   
 `;
 
-export const EditButton = styled.section`
-  ${({ theme }) => css``}
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-  :hover {
-    transform: scale(1.1);
-  }
-  img {
-    width: 3rem;
-  }
-`;
