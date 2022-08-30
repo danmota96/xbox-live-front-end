@@ -7,9 +7,7 @@ import * as S from "./style";
 import * as yup from "yup";
 import api from "services/api";
 import toast from "react-hot-toast";
-
 import { User } from "types";
-
 import { useUsers } from "contexts/user";
 
 /* HOOKFORM */
@@ -28,16 +26,16 @@ interface UserData {
 }
 
 const newUserSchema = yup.object().shape({
-  name: yup.string().required("Title is required"),
+  name: yup.string().required("Name is required"),
 
-  email: yup.string().required("User description is required"),
+  email: yup.string().required("email is required"),
 
   image: yup
     .string()
     .url("Invalid URL format")
     .required("User cover image is required"),
 
-  cpf: yup.string().url("Invalid URL format").required("Embed URL required"),
+  cpf: yup.string().required("CPF is required"),
 
   isAdmin: yup
     .string()

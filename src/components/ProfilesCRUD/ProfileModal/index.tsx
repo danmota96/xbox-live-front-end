@@ -33,8 +33,6 @@ const updateProfileSchema = yup.object().shape({
   image: yup.string(),
 });
 
-
-
 const ProfileModal = ({handleOpenModal, profile, setProfile}: ProfileModalProps  ) => { 
   const { handleGetProfiles } = useProfiles();
 

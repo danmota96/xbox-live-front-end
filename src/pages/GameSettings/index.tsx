@@ -16,9 +16,10 @@ const GameSettings = () => {
   }
 
   const { games } = useGames();
+  const [game, setGame] = useState<Game | undefined>(undefined);
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false);
-  const [game, setGame] = useState<Game | undefined>(undefined);
+
   
   const handleOpenModal = () => {
     setOpenModal(!openModal);

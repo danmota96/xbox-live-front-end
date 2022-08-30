@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import * as S from "./style";
 import * as yup from "yup";
 import { useState } from "react";
-import { mockedGenres } from "../../../mocks/genres"
 import api from "services/api";
 import toast from "react-hot-toast";
 import { useGames } from "contexts/games";
@@ -152,7 +151,7 @@ const GameModal = ({handleOpenModal, game, setGame}: GameModalProps  ) => {
           </option> 
            ))}
         </S.Select>
-
+      
         <StyledInput 
         defaultValue={game ? game.year : ""}
         placeholder="Year" 
