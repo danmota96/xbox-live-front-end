@@ -6,19 +6,23 @@ const BoxUser = () => {
   const { users } = useUsers();
   let Navigate = useNavigate();
   function goToAdminHome() {
-  Navigate("/home");
-}
+    Navigate("/home");
+  }
 
   return (
-    <S.BoxUser>  
-        {users.map((element) => (
-          <div key={element.name}>
-                <S.UserIcon src={element.image} alt='profile' onClick={goToAdminHome}/>
-                <h2>{element.name}</h2> 
-          </div>   
-        ))}    
+    <S.BoxUser>
+      {users.map((element) => (
+        <div key={element.name}>
+          <S.UserIcon
+            src={element.image}
+            alt="profile"
+            onClick={goToAdminHome}
+          />
+          <h2>{element.name}</h2>
+        </div>
+      ))}
     </S.BoxUser>
-  )
-}
+  );
+};
 
 export default BoxUser;
