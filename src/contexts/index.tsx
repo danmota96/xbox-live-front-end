@@ -1,5 +1,5 @@
 import theme from "assets/styles/theme";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { AuthProvider } from "./auth";

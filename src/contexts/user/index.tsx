@@ -34,7 +34,7 @@ import {
       };
       api.get("/user", headers).then((res) => {
         setUser(res.data);
-        console.log(res);
+
       }
      );
     };

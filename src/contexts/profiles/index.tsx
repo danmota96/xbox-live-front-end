@@ -34,7 +34,7 @@ import {
       };
       api.get("/profile", headers).then((res) => {
         setProfile(res.data);
-        console.log(res);
+
       }
      );
     };

@@ -34,7 +34,6 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     };
     api.get("/game", headers).then((res) => {
       setGame(res.data);
-      console.log(res);
     })
   };
 
