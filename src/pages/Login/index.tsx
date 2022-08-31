@@ -2,9 +2,6 @@ import * as S from "./style";
 import logo from "assets/imgs/logo.png";
 import ButtonLarge from "components/ButtonLarge";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { loginService } from "services/authService";
-import swal from "sweetalert";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -82,11 +79,11 @@ const Login = () => {
                 id="password"
                 {...register("password")}
               />
-              <a>
+           
                 <Link to="/create-user" className="link-register">
                   No account?Create one!
                 </Link>
-              </a>
+         
               <ButtonLarge value="Sign in" type="submit"/>
             </S.BoxLoginForm>
             <ErrorMessage>
