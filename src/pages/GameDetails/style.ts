@@ -24,8 +24,9 @@ export const GameDetailsBox1 = styled.div`
 	justify-content: center;
 	align-items: center;
 	img { 
-		width: 15rem;
-		height: 15rem;
+		width: 18rem;
+		height: 25rem;
+		object-fit: cover;
 	}
 	iframe { 
 		width: 30rem;

@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import back from "assets/icons/back.svg";
 import * as S from "./style";
 import { useGenres } from 'contexts/genres';
-import api from 'services/api';
 
 
 const HomePage = () => {  

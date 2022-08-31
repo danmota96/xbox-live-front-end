@@ -5,8 +5,6 @@ export const GameBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 13.75rem;
-    height: 14rem;
     flex-direction: column;
     transition: box-shadow 0.3s;
     :hover {

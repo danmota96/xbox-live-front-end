@@ -28,8 +28,16 @@ const GameDetails = () => {
   } 
 
 const handleGetGameById = () => {
+  const token = localStorage.getItem("token");
+  
+    const headers = { 
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
   api.
-  get(`/game/${gameId}`)
+  get(`/game/${gameId}`, headers)
   .then((res) => {
     setGame(res.data);
   });
@@ -54,10 +62,10 @@ useEffect(() => {
        
         <S.GameDetailsBox2>
         <h2>{game.description}</h2>
-        <h2>IMDb Score:</h2>
-        <h3>{game.ImdbScore}</h3>
-        <h2>R${game.price}</h2>
-        <h2>{game.price}</h2>
+        <h2>IMDb Score : {game.ImdbScore}</h2>
+        <h2>Price: R${game.price}</h2>
+        <h2>Release Year: {game.year}</h2>
+        
         </S.GameDetailsBox2>
     </S.GameDetails>
   )

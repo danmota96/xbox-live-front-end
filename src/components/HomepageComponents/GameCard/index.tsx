@@ -6,7 +6,6 @@ import * as S from "./style";
 
 interface GameCardProps {
   game: Game;
-  setGame: React.Dispatch<React.SetStateAction<Game | undefined>>;
 }
 
 interface GameData {
@@ -21,16 +20,14 @@ interface GameData {
   ImdbScore?: number;
 }
 
-
-const GameCard = ({ game, setGame }: GameCardProps) => {
+const GameCard = ({ game }: GameCardProps) => {
   let Navigate = useNavigate();
 
   return (
     <S.GameBox onClick={()=> {
-      Navigate(`/game-details/${game.id}`);
+      Navigate(`/gamedetails/${game.id}`);
     }}> 
       <img src={game.image} alt={game.title} />
-      <h4>{game.title}</h4>
     </S.GameBox>
   );
 };
