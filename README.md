@@ -1,3 +1,12 @@
+#DEPLOY LINKS:
+
+Back-end: https://xbox-live-server.onrender.com/api
+Front-end: https://xbox-live-front-end.vercel.app/
+
+user: daniel.msil2@gmail.com
+password: Abcd@1234
+
+#
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
