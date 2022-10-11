@@ -6,18 +6,6 @@ import api from 'services/api';
 import { useEffect, useState } from 'react';
 
 
-interface GameData {
-  title?: string;
-  description?: string;
-  genreName?: string;
-  price?: number;
-  year?: number;
-  image?: string;
-  TrailerYouTubeUrl?: string;
-  GameplayYouTubeUrl?: string;
-  ImdbScore?: number;
-}
-
 const GameDetails = () => {
   const [game, setGame] = useState<Game>({} as Game);
   const { gameId } = useParams();

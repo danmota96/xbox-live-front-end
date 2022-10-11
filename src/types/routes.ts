@@ -8,4 +8,4 @@ export enum RoutePath {
     GENRE_SETTINGS = '/settings/genres',
     PROFILE_SETTINGS = '/settings/profiles',
     USER_SETTINGS = '/settings/users',
-  }
+}
