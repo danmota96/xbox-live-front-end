@@ -2,14 +2,6 @@ import * as T from "../types/index";
 
 export const mockedProfiles: T.Profile[] = [
     {
-      id: "bd49471a-f05d-4b9e-81e4-9169553eea43",
-      name: "DanielMotas123",
-      image: "https://avatars.githubusercontent.com/u/97922515?v=4",
-      userId: "f7f45b19-bb7c-4f0d-87ea-f0d3c04423b5", 
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    },
-    {
       id: "57ed16b5-5bcb-441d-ab31-8a21001b8ffa",
       name: "DanDanM",
       image:
