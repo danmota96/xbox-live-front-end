@@ -8,7 +8,6 @@ import { useGames } from "contexts/games";
 import { Game } from "types";
 import DeleteGameModal from "components/GamesCRUD/DeleteGameModal";
 import MenuSettings from "components/SettingsMenu";
-import { mockedGames } from "mocks/games";
 
 const GameSettings = () => {
   let Navigate = useNavigate();
@@ -47,7 +46,7 @@ const GameSettings = () => {
             <p>Add Game</p>
           </S.AddEntitieCard>
 
-          {mockedGames.map((element) => (
+          {games.map((element) => (
             <SettingsGameCard
               setGame={setGame}
               handleOpenModal={handleOpenModal}

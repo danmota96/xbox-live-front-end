@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 
 export const GenresSection = styled.section`
-	${() => css`
+	${({ theme }) => css`
 	margin-top: 7rem;
 	h1 {
 		font-size: 3rem;
@@ -11,7 +11,7 @@ export const GenresSection = styled.section`
 `;
 
 export const GenreList = styled.section`
-	${() => css`
+	${({ theme }) => css`
     display: flex;
 	flex-direction: row;
 	`}

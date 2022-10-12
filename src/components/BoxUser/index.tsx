@@ -1,7 +1,6 @@
 import * as S from "./style";
 import { useNavigate } from "react-router-dom";
 import { useUsers } from "contexts/user";
-import { mockedUsers } from "mocks/users";
 
 const BoxUser = () => {
   const { users } = useUsers();
@@ -12,7 +11,7 @@ const BoxUser = () => {
 
   return (
     <S.BoxUser>
-      {mockedUsers.map((element) => (
+      {users.map((element) => (
         <div key={element.name}>
           <S.UserIcon
             src={element.image}

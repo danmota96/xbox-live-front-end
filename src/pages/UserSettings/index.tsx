@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { User } from "types";
 import * as S from "./style";
+import { useUsers } from "contexts/user";
 import UserModal from "components/UsersCRUD/UserModal";
 import DeleteUserModal from "components/UsersCRUD/DeleteUserModal";
-import { mockedUsers } from "mocks/users";
 
 const UserSettings = () => {
   let Navigate = useNavigate();
@@ -14,6 +14,7 @@ const UserSettings = () => {
     Navigate("/home");
   }
   
+  const { users } = useUsers();
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false);
   const [user, setUser] = useState<User | undefined>(undefined);
@@ -46,7 +47,7 @@ const UserSettings = () => {
             <p>Add User</p>
           </S.AddEntityCard>
 
-          {mockedUsers.map((element) => (
+          {users.map((element) => (
           <S.SettingsUserCard key={element.id}>
             <img src={element.image} alt={element.name} />
             <h2>{element.name}</h2>

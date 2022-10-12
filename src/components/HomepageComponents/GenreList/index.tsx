@@ -1,15 +1,19 @@
 import GenreCard from 'components/HomepageComponents/GenreCard';
-import { mockedGenres } from 'mocks/genres';
+import { Genre } from 'types';
 import * as S from "./style";
 
+interface GenreListProps  { 
+  list: Genre[];
+}
 
-const GenreList = () => {
+const GenreList = ({ list }: GenreListProps) => {
+
   return (
   <S.GenresSection>
     <h1>Genres</h1>
     <S.GenreList>
-      {mockedGenres.map((element) => (
-         <GenreCard genre={element} key={element.id}/>
+      {list.map((element, index) => (
+         <GenreCard genre={element} key={index}/>
         ))} 
     </S.GenreList>
   </S.GenresSection>

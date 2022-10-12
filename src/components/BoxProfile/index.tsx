@@ -1,7 +1,6 @@
 import * as S from "./style";
 import { useProfiles } from "contexts/profiles";
 import { useNavigate } from "react-router-dom";
-import { mockedProfiles } from "mocks/profile";
 
 const BoxProfile = () => {
   const { profiles } = useProfiles();
@@ -12,7 +11,7 @@ const BoxProfile = () => {
 
   return (
     <S.BoxProfile>
-      {mockedProfiles.map((element) => (
+      {profiles.map((element) => (
         <div key={element.name}>
           <S.ProfileIcon
             src={element.image}
