@@ -8,6 +8,18 @@ interface GameCardProps {
   game: Game;
 }
 
+interface GameData {
+  title?: string;
+  description?: string;
+  genreName?: string;
+  price?: number;
+  year?: number;
+  image?: string;
+  TrailerYouTubeUrl?: string;
+  GameplayYouTubeUrl?: string;
+  ImdbScore?: number;
+}
+
 const GameCard = ({ game }: GameCardProps) => {
   let Navigate = useNavigate();
 

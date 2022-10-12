@@ -10,7 +10,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useAuth } from "contexts/auth";
 import { ErrorMessage } from "assets/styles/globalStyles";
 
-/* interface LoginData {
+interface LoginData {
   email: string;
   password: string;
 }
@@ -29,14 +29,11 @@ const loginSchema = yup.object().shape({
       "Sua senha deve ter no mímino 1 caracter especial, um número e uma letra maiúscula"
     )
     .required("Campo de senha obrigatório"),
-}); */
+});
 
 const Login = () => {
-  let Navigate = useNavigate();
-  function goToHome() {
-    Navigate("/profile/select");
-} 
- /*  const { login } = useAuth();
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const {
     register,
@@ -54,7 +51,7 @@ const Login = () => {
       .catch(() => {
         toast.error("Usuário ou senha inválido");
       });
-  }; */
+  };
 
   return (
     <S.Login>
@@ -67,31 +64,31 @@ const Login = () => {
             <S.BoxLoginText>
               <span>Sign in</span>
             </S.BoxLoginText>
-            <S.BoxLoginForm /* onSubmit={handleSubmit(handleLogin)} */>
+            <S.BoxLoginForm onSubmit={handleSubmit(handleLogin)}>
               <input
-               /*  type="text"
+                type="text"
                 placeholder="E-mail"
                 
                 id="email"
-                {...register("email")} */
+                {...register("email")}
               />
               <input
-               /*  type="password"
+                type="password"
                 placeholder="Password"
                
                 id="password"
-                {...register("password")} */
+                {...register("password")}
               />
-          {/*  
+           
                 <Link to="/create-user" className="link-register">
                   No account?Create one!
-                </Link> */}
+                </Link>
          
-              <ButtonLarge value="Sign in" type="submit" onClick={goToHome}/>
+              <ButtonLarge value="Sign in" type="submit"/>
             </S.BoxLoginForm>
-           {/*  <ErrorMessage>
+            <ErrorMessage>
           {errors.email?.message || errors.password?.message}
-        </ErrorMessage> */}
+        </ErrorMessage>
           </S.BoxLogin>
         </S.BoxContent>
       </S.WhiteBox>

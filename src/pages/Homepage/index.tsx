@@ -4,9 +4,11 @@ import NavBar from 'components/HomepageComponents/NavBar';
 import { useNavigate } from 'react-router-dom';
 import back from "assets/icons/back.svg";
 import * as S from "./style";
+import { useGenres } from 'contexts/genres';
 
 
 const HomePage = () => {  
+  const { genres } = useGenres();
   let Navigate = useNavigate();
   function goToStart() {
   Navigate("/profile/select");
@@ -22,7 +24,7 @@ const HomePage = () => {
       <S.BoxItems>
       <GameList/>
       {/* <FavoriteList/> */}
-      <GenreList/> 
+      <GenreList list={genres}/> 
       </S.BoxItems>
       </section>
       

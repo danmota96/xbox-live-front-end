@@ -2,7 +2,7 @@ import back from "assets/icons/back.svg";
 import DeleteProfileModal from "components/ProfilesCRUD/DeleteProfileModal";
 import ProfileModal from "components/ProfilesCRUD/ProfileModal";
 import MenuSettings from "components/SettingsMenu";
-import { mockedProfiles } from "mocks/profile";
+import { useProfiles } from "contexts/profiles";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Profile } from "types";
@@ -14,6 +14,7 @@ const ProfileSettings = () => {
     Navigate("/home");
   }
   
+  const { profiles } = useProfiles();
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | undefined>(undefined);
@@ -48,7 +49,7 @@ const ProfileSettings = () => {
             <p>Add Profile</p>
           </S.AddEntityCard>
 
-          {mockedProfiles.map((element) => (
+          {profiles.map((element) => (
           <S.SettingsProfileCard key={element.id}>
             <img src={element.image} alt={element.name} />
             <h2>{element.name}</h2>
