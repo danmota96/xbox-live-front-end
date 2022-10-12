@@ -1,10 +1,7 @@
 #DEPLOY LINKS:
 
-Back-end: https://xbox-live-server.onrender.com/api
-Front-end: https://xbox-live-front-end.vercel.app/
-
-user: daniel.msil2@gmail.com
-password: Abcd@1234
+Back-end: https://xbox-live-server.onrender.com/api (still fixing)
+Front-end (mock): https://xbox-live-mocks.herokuapp.com/
 
 #
 # Getting Started with Create React App
