@@ -16,9 +16,9 @@ export const NavBarIcons = styled.section`
 
 export const UserIcon = styled.img`
   ${({ }) => css``}
-  width: 3rem;
-  height: 3rem;
-  background-color: gray;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
   border-radius: 50%;
 `;
 

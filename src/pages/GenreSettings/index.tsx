@@ -3,6 +3,7 @@ import DeleteGenreModal from "components/GenresCRUD/DeleteGenreModal";
 import GenreModal from "components/GenresCRUD/GenreModal";
 import MenuSettings from "components/SettingsMenu";
 import { useGenres } from "contexts/genres";
+import { mockedGenres } from "mocks/genres";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Genre } from "types";
@@ -14,7 +15,6 @@ const GenreSettings = () => {
     Navigate("/home");
   }
   
-  const { genres } = useGenres();
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false);
   const [genre, setGenre] = useState<Genre | undefined>(undefined);
@@ -49,7 +49,7 @@ const GenreSettings = () => {
             <p>Add Genre</p>
           </S.AddEntityCard>
 
-          {genres.map((element) => (
+          {mockedGenres.map((element) => (
           <S.SettingsGenreCard key={element.id}>
             <h2>{element.genre}</h2>
 
