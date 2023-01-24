@@ -1,9 +1,14 @@
 <a id="Cloudwalk.io E-commerce Manager"></a>
 
-# [Xbox - Live - Frontend](#Xbox - Live - Frontend)
+# [Xbox-Live-Frontend]
 
 # <h1 align="center"> [![Typing SVG](<https://readme-typing-svg.herokuapp.com/?color=ffffff&size=35&center=true&vCenter=true&width=1000&lines=Seja+bem+vindo(a)+ao+projeto+Xbox-Live!>)](https://git.io/typing-svg) </h1>
-
+  
+#
+  
+Projeto desenvolvido no módulo 5 do curso de fullstack da Blue Edtech.
+#
+  
 Projeto desenvolvido para clonar lista de jogos do Xbox, CRUD de gêneros, jogos e usuários, autenticação com JWT.
 
 #
